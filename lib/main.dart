@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:parsing_ujikom/sample_json.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:parsing_ujikom/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MyHomePage(),
+      home: ProfilePage(),
     );
   }
 }
@@ -35,8 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
       _jsonContent = sample.toString();
     });
   }
+
   late String _jsonContent = "";
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
